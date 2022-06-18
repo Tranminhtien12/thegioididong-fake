@@ -1,0 +1,125 @@
+<div class="body-row">
+    <div class="row">
+        <div class="col-12">
+            <a style="text-decoration: none;" href="#!/trangchu">Trang chủ > </a><a href="#!/{{cat}}" style="text-decoration: none;">Sản phẩm</a> > {{name}}
+            <div class="chitietsanpham-name">
+                <h3>{{name}}</h3>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5">
+
+            <div class="chitietsanpham-img">
+                <img src="./image/{{img}}" alt="">
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="chitietsanpham-title">
+                <ul>
+                    <li>Hãng: {{hang | uppercase}}</li>
+                    <li>Số lượng còn: {{soluong}} cái</li>
+                    <li>Năm sản xuất: {{namsx}}</li>
+                    <li>Giá: {{price | number}} <sup><u>đ</u></sup></li>
+                </ul>
+                <p style="margin-left: -15px; font-weight: 600;">chọn màu:</p>
+                <div style="font-weight: 600; margin-top: -20px; margin-bottom: 15px;">
+                    <!-- <input type="hidden" name="mau" value="{{mau}}" > -->
+                    <input type="radio" name="chonmau" id="chonmau" checked ng-init="mau = 'Trắng'" ng-click="mautrang()" > Trắng
+                    <input type="radio" name="chonmau" id="chonmau"  ng-click="mauden()"> Đen
+
+                </div>
+                <div class="chitietsanpham-muangay">
+                    <label for="soluongmua">số lượng mua</label>
+                    <input type="number" name="soluongmua" id="soluongmua" min="1" ng-model="soluongmua" ng-init="soluongmua=1"
+                        style="width: 50px; ">
+                    <div class="chitietsanpham-button">
+                        <a class="btn btn-primary" type="button" style="color: #fff;" href="#!/thanhtoan/{{name}}/{{soluongmua}}/{{img}}/{{price}}/{{mau}}">Mua ngay</a>
+                        <button class="btn btn-outline-danger" style="border-radius: 10%;"><img src="./image/heart.png"
+                                style="width: 25px; height: inherit; " alt=""></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <table class="bangkhuyenmai"  >
+                <tr>
+                    <td style="background-color: #f1f1f1;">
+                        <div style="font-weight: 600; margin-bottom: -25px;">Khuyến mãi trị giá 100.000₫</div> <br>
+                        <div style="font-weight: 350; font-size: 15px;">Giá và khuyến mãi dự kiến áp dụng đến 23:00 30/11</div>
+                        
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="span-khuyenmai">1</span>  Tặng Phiếu mua hàng 100,000đ áp dụng mua thẻ cào, thẻ game <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                        <p><span class="span-khuyenmai">2</span>  Giảm đến 1,500,000đ khi tham gia thu cũ đổi mới (Không áp dụng kèm giảm giá qua VNPay) <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                        <p><span class="span-khuyenmai">3</span>  Giảm thêm 5% khi mua cùng sản phẩm bất kỳ có giá cao hơn <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                        <p><span class="span-khuyenmai">4</span>  Giảm 50% giá mua gói bảo hiểm rơi vỡ 6 tháng (trị giá đến 1,000,000đ) <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                        <p><span class="span-khuyenmai">5</span>  Giảm 50% giá gói cước 1 năm (Vina350/Vina500) cho Sim VinaPhone trả sau (Trị giá đến 3 triệu) <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                        <p><span class="span-khuyenmai">6</span>  Nhập mã TGDD11 giảm 5% tối đa 700.000đ cho hóa đơn từ 500.000đ khi thanh toán qua Ví Moca trên ứng dụng Grab <a href="#" style="text-decoration: none;">Xem chi tiết</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <h4 style="margin-top: 30px;">Các sản phẩm khác</h4>
+        <ul class="products">
+            <li ng-repeat="sp in dtdd | limitTo: 4 : 0">
+                <div class="product-item">
+                    <div class="product-top">
+                        <input type="hidden" name="{{sp.id}}" value="{{sp.id}}">
+
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="product-img">
+                            <img src="./image/{{sp.img}}" alt="">
+                        </a>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="buy-now">mua ngay</a>
+                    </div>
+                    <div class="product-title">
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="product-name">{{sp.name}}</a>
+                        <div class="product-price">{{sp.price | number}} <sup><u>đ</u></sup> </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="products">
+            <li ng-repeat="sp in laptop | limitTo: 4 : 4">
+                <div class="product-item">
+                    <div class="product-top">
+                        <input type="hidden" name="{{sp.id}}" value="{{sp.id}}">
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="product-img">
+                            <img src="./image/{{sp.img}}" alt="">
+                        </a>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="buy-now">mua ngay</a>
+                    </div>
+                    <div class="product-title">
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}"
+                            class="product-name">{{sp.name}}</a>
+                        <div class="product-price">{{sp.price | number}} <sup><u>đ</u></sup> </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="binhluan">
+                <h4>Bình luận</h4>
+                <textarea name="" id="" cols="80" rows="4" placeholder="mời bạn để lại bình luận...."></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+

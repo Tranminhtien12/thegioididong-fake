@@ -1,0 +1,466 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* header{
+    margin-bottom: 171px;
+} */
+/* header .menu-fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 1000!important;
+    top: 0;
+} */
+.left-img {
+    margin-left: 50px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
+
+.left {
+    margin-left: 100px;
+}
+
+.right {
+    margin-right: 200px;
+}
+
+.ul-sidemenu {
+    background-color: yellow;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.ul-sidemenu li{
+    padding: 0px 7px;
+}
+
+.sidemenu {
+    list-style-type: none;
+}
+.ul-sidemenu a{
+    display: block;
+    padding: 15px 0px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.ul-sidemenu a::after{
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: tomato;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.5s ease-in-out;
+}
+.ul-sidemenu a:hover::after{
+    width: 50%;
+    transform: translateX(100%);
+}
+.a-sidemenu {
+    color: black;
+}
+
+.body-row{
+    margin: 0px auto;
+    width: 1170px;
+}
+.register-form{
+    margin: 0px auto;
+    width: 600px;
+    max-width: 650px;
+}
+h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* sản phẩm */
+ul.products {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+ul.products li{
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    /* margin-bottom: 30px; */
+    border: #f1f1f1 1px solid;
+    
+}
+ul.products li:hover {
+    box-shadow: 2px 2px 7px gray;
+}
+ul.products li:hover img{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+ul.products li img{
+    padding-top: 10px;
+    padding-left: 25px;
+    max-width: 100%;
+    height: 200px;
+}
+
+
+ul.products li .product-item .product-top{
+    position: relative;
+    overflow: hidden;
+}
+ul.products li .product-item .product-top .product-img{
+    display: block;
+}
+ul.products li:hover .product-item .product-top .product-img{
+    filter: opacity(85%);
+}
+ul.products li .product-item .product-top .product-img img{
+    display: block;
+}
+ul.products .product-item .product-top a.buy-now{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #446084;
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -44px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+}
+ul.products li:hover .product-top a.buy-now{
+    bottom: 0px;
+}
+ul.products .product-item .product-title{
+    padding: 10px 0px;
+}
+ul.products .product-item .product-title .sieu-sale{
+    background-color: red;
+    width: 125px;
+    text-align: center;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+ul.products .product-item .product-title a{
+    display: block;
+}
+ul.products .product-item .product-title a.product-name{
+    color: black;
+    text-decoration: none;
+    padding: 3px 0px;
+}
+ul.products li:hover .product-item .product-title a.product-name {
+    color: blue;
+}
+ul.products .product-item .product-title .product-price{
+    padding: 2px 0px;
+    font-weight: 600;
+}
+ul.thongtinchitiet{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+ul.thongtinchitiet li{
+    border: none;
+    list-style-type: disc;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+ul.thongtinchitiet li:hover{
+    box-shadow: none;
+
+}
+.dtnb{
+    color: black;
+    padding: 10px 10px;
+    border-bottom: 3px solid tomato;
+
+}
+
+.carousel{
+    width: 780px;
+    
+}
+.carousel-Product{
+    width: 100%;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width: 50px; 
+    height: 50px; 
+    margin-top: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.ul-banner{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.ul-banner li img{
+    width: 165px;
+    height: 140px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.ul-banner-muc{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.ul-banner-muc li img{
+    width: 350px;
+    height: 130px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.button-page{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+.ul-sapxep {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.ul-sapxep li{
+    margin-left: 20px;
+    
+}
+.ul-sapxep li b{
+    font-weight: 600;
+    font-size: 30px;
+}
+.xemchitiet{
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.xemchitiet a{
+    color: black;
+    text-decoration: none;
+}
+.xemchitiet a:hover{
+    color: blue;
+}
+/* chitietsanpham */
+.chitietsanpham-name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.chitietsanpham-img{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.chitietsanpham-img img{
+    width: 400px;
+    height: 300px;
+}
+.chitietsanpham-title {
+    margin-top: 20px;
+}
+.chitietsanpham-title li{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.chitietsanpham-muangay{
+    margin-left: -15px;
+}
+.binhluan{
+    margin-top: 100px;
+}
+.bangkhuyenmai{
+    border: #f1f1f1 1px solid;
+}
+.bangkhuyenmai tr td .span-khuyenmai{
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 50%;
+
+}
+/* footer */
+footer{
+    margin: 0px auto;
+    width: 1170px;
+}
+
+.ul-footer-icon{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.ul-footer-icon li{
+    flex-basis: 50%;
+}
+.ul-footer-icon li a{
+    text-decoration: none;
+}
+
+.ul-footer-bank{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.ul-footer-bank li{
+    flex-basis: 25%;
+}
+
+#back-top{
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+.thuonghieu{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.thuonghieu ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.thuonghieu ul li{
+    flex-basis: 30%;
+    margin-left: 10px;
+}
+
+.thuonghieu ul li img{
+    width: 380px;
+}
+.tintuc{
+    font-size: 20px;
+    font-weight: 600;
+}
+.tintuc a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.tintuc ul{
+    list-style-type: none;
+}
+.tintuc ul:hover{
+    color: blue;
+    
+}
+.tintuc ul li{
+    cursor: pointer;
+} 
+.tintuc-title{
+    margin-top: 30px;
+}
+.tintuc-title img{
+    width: 150px;
+    height: inherit;
+}
+.tintuc-title ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tintuc-title ul li{
+    flex-basis: 30%;
+}
+.tintuc-title ul:hover{
+    color: blue;
+    
+}
+.tintuc-title ul li{
+    cursor: pointer;
+} 
+/* thanh toán */
+.body-user{
+   margin: 0px auto;
+    max-width: 600px;
+    background-color: cornsilk;
+}
+.thanhtoan{
+    margin-top: 30px;
+}
+.thanhtoan-title ul{
+    list-style-type: none;
+}
+.user-profile .gender{
+    font-weight: 600;
+    margin-left: 50px;
+}
+.user-profile .hoten{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.user-profile .diachi{
+    margin-bottom: 20px;
+}
+.user-profile .diachi input{
+    width: 500px;
+    height: 35px;
+    margin-left: 50px;
+}
+.user-profile .cachthuc{
+    font-weight: 600;
+    margin-left: 50px;
+}
+.user-profile .yeucaukhac{
+    margin-top: 20px;
+}
+.user-profile .yeucaukhac input{
+    width: 500px;
+    height: 35px;
+    margin-left: 50px;
+}
+
+.user-profile .magiamgia {
+    width: 500px;
+    height: 35px;
+    margin-left: 50px;
+}
+
+/* quảng cáo */
+.quangcaophai{
+    position: fixed;
+    right: 80px;
+    bottom: 270px;
+}
+.quangcaotrai{
+    position: fixed;
+    left: 80px;
+    bottom: 270px;
+}
+/* hóa đơn */
+.user-profile-hoadon ul{
+    list-style: none;
+    margin-left: 10px;
+}

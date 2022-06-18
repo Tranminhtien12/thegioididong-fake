@@ -1,0 +1,23 @@
+
+<div class="register-form">
+    <h2 style="text-align: center;">Đăng ký</h2>
+    <form action="#!/trangchu" name="loginform">
+        <div class="form-group">
+            <label for="usernameid">Tài khoản</label>
+            <input type="text" class="form-control" ng-model="username" placeholder="username" name="username" id="usernameid" required>
+            <div style="color: red;" ng-hide= "loginform.username.$valid">vui lòng nhập tài khoản* </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" class="form-control" ng-model="password" placeholder="password" name="password" id="password" required>
+            <div style="color: red;" ng-hide= "loginform.password.$valid">password có ít nhất 6 kí tự và có ít nhất 1 kí tự đặc biệt*</div>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <a href="#!/login">Đã có tài khoản</a>
+        </div>
+        <button onclick="thongbao()" type="button" class="btn btn-primary btn-block">đăng ký</button>
+    </form>
+
+    
+</div>
+

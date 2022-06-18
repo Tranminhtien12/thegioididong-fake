@@ -1,0 +1,55 @@
+<img src="./image/Capture.PNG" style="width: 100%; height: 300px; margin-top: -14px;" alt="">
+
+<div class=" body-row" style="margin-top: 15px;">
+    <div class=" body-row">
+        <img src="./image/khuyenmai1.png" style="width: 100%;" alt="">
+    </div>
+    <a href="#!/trangchu">Trang chủ</a> > Phụ kiện
+        <h3 class="dtnb">Phụ kiện nổi bật nhất</h3>
+        <div class="sapxep">
+            <ul class="ul-sapxep">
+                <li>
+                    <div class="dropdown">
+                        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-expanded="true">
+                            sắp xếp
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="" ng-click="sortBy('price')">theo giá (tăng/giảm)</a>
+                            <a class="dropdown-item" href="" ng-click="sortBy('name')">theo tên (A-Z,Z-A)</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="products">
+            <li ng-repeat="sp in phukien | limitTo: pagesize : begin | orderBy: col">
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="product-img">
+                            <img src="./image/{{sp.img}}" alt="">
+                        </a>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="buy-now">mua ngay</a>
+                    </div>
+                    <div class="product-title">
+                        <div class="sieu-sale">{{sp.uudai}}</div>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="product-name">{{sp.name}}</a>
+                        <div class="product-price">{{sp.price | number}}<sup><u>đ</u></sup></div>
+                        <div style="color: rgb(241, 238, 56);">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="button-page">
+            <button type="button" class="btn btn-outline-primary" ng-click=first()> trang đầu</button>
+            <button type="button" class="btn btn-outline-primary" ng-click=previous()>trang trước</button>
+            <button type="button" class="btn btn-outline-primary" ng-click=next()>trang kế</button> 
+            <button type="button" class="btn btn-outline-primary" ng-click=last()>trang cuối</button> 
+        </div>
+    </div>

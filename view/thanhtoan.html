@@ -1,0 +1,93 @@
+<div class="body-row">
+    <div class="row">
+        <div class="col-6">
+            <a href="#!/trangchu">Mua tiếp sản phẩm khác</a>
+        </div>
+        <div class="col-6">
+            <div style="margin-left: 200px;"> giỏ hàng của {{genderchose}} <b>{{username | uppercase}}</b></div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <h3>Thông tin sản phẩm</h3>
+        </div>
+        <div class="col-4" style="text-align: right;">
+            <h4>Thành tiền</h4>
+        </div>
+    </div>
+    <div class="row thanhtoan">
+        <div class="col-3">
+            <img src="./image/{{img}}" width="250px" height="250px" alt="">
+
+        </div>
+        <div class="col-6 thanhtoan-title">
+            <ul>
+                <li>{{name}}</li>
+                <li style="color: blue;">số lượng mua: {{soluongmua}}</li>
+                <li style="color: blue;">màu: {{mau}}</li>
+            </ul>
+            <hr>
+            <div style="margin-top: 20px; font-weight: 600;">Tạm tính ({{soluongmua}} sản phẩm):</div>
+        </div>
+
+        <div class="col-2">
+            <div class="thanhtoan-price">{{price | number}} <sup><u>đ</u></sup></div>
+            <div style="margin-top: 85px; color: red; font-weight: 600;">{{soluongmua*price |
+                number}}<sup><u>đ</u></sup></div>
+        </div>
+    </div>
+    <hr>
+    <div class="user-profile body-user">
+        <h3>Thông tin khách hàng</h3>
+            <h5>giới tính</h5>
+            <div class="gender">
+                <input type="radio" name="gender" id="gender" ng-click="genderAnh()"> Anh
+                <input type="radio" name="gender" id="gender" ng-click="genderChi()"> Chị
+            </div>
+            <div class="row hoten">
+                <div class="col-5">
+                    <input class="form-control" type="text" name="hovaten" ng-model="username" id="hovaten"
+                        placeholder="Nhập họ và tên" required>
+                        
+                </div>
+                <div class="col-5">
+                    <input class="form-control" type="text" name="sdt" ng-model="phonenumber" id="sdt"
+                        placeholder="Nhập số điện thoại">
+                        
+                </div>
+            </div>
+            <div class="cachthucgiaohang">
+                <h5>Chọn phương thức giao hàng</h5>
+                <div class="cachthuc">
+                    <input type="radio" name="giaohang" ng-click="cach1()" id="giaohang"> Giao tận nơi
+                    <input type="radio" name="giaohang" ng-click="cach2()" id="giaohang"> Nhận tại siêu thị
+                </div>
+            </div>
+            <div class="diachi">
+                <h5>Địa chỉ giao hàng</h5>
+                <input class="form-control" type="text" ng-model="diachi"  placeholder="Quận(tỉnh),số nhà,đường,...">
+
+            </div>
+            <div class="yeucaukhac">
+                <h5>Yêu cầu khác</h5>
+                <input type="text" ng-model="yeucau" placeholder="Yêu cầu khác... (không bắt buộc)">
+            </div>
+            <hr>
+            <h5>Mã giảm giá</h5>
+            <input type="hidden" name="" ng-init="magiamgia=''">
+            <input class="magiamgia" type="text" ng-model="magiamgia" placeholder="Mã giảm giá.. (nếu có)">
+            <hr>
+            <h5>Tổng tiền: {{soluongmua*price | number}}đ </h5>
+            <hr>
+            <div style="text-align: center;">
+                <!-- <button class="btn btn-outline-primary btn-block">Đăt hàng</button> -->
+                <a
+                    href="#!/hoadon/{{img}}/{{name}}/{{soluongmua}}/{{soluongmua*price}}/{{genderchose}}/{{username}}/{{phonenumber}}/{{diachi}}/{{yeucau}}/{{magiamgia}}/{{mau}}/{{giaohang}}"><input
+                        type="button" class="btn btn-outline-primary" value="Đăt hàng">
+                </a>
+            </div>
+    </div>
+
+</div>

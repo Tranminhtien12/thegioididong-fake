@@ -1,0 +1,100 @@
+<div class=" body-row">
+    <img src="./image/khuyenmai1.png" style="width: 100%;" alt="">
+</div>
+<div class=" body-row" style="margin-top: 15px;">
+    <div class="row">
+        <div class="col-8">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" style="width: 100%;" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./image/800-200-800x200-188.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./image/800-200(2)-800x200-1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./image/800-200(8)-800x200.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next" >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </button>
+              </div>
+        </div>
+
+        <div class="col-4">
+            <div class="banner">
+                <ul class="ul-banner-muc">
+                    <li><img src="./image/DHTT-390x97.png" style="height: 90px;" alt=""></li>
+                    <li><img src="./image/sticky-390-97-2-390x97.png" style="height: 90px; " alt=""></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a href="#!/trangchu">Trang chủ</a> > Đồng hồ thời trang
+        <h3 class="dtnb">Đồng hồ thời trang nổi bật</h3>
+        <div class="sapxep">
+            <ul class="ul-sapxep">
+                <li>
+                    <div class="dropdown">
+                        <a class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-expanded="true">
+                            sắp xếp
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="" ng-click="sortBy('price')">theo Giá (tăng/giảm)</a>
+                            <a class="dropdown-item" href="" ng-click="sortBy('name')">theo Tên (A-Z,Z-A)</a>
+                            <a class="dropdown-item" href="" ng-click="sortBy('duongkinhmat')">theo đường kính</a>
+                            <a class="dropdown-item" href="" ng-click="sortBy('hang')">theo Hãng</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="products">
+            <li ng-repeat="sp in dhtt | limitTo: pagesize : begin | orderBy: col">
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="product-img">
+                            <img src="./image/{{sp.img}}" alt="">
+                        </a>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="buy-now">mua ngay</a>
+                    </div>
+                    <div class="product-title">
+                        <div class="sieu-sale">{{sp.uudai}}</div>
+                        <a href="#!/chitietsanpham/{{sp.id}}/{{sp.name}}/{{sp.img}}/{{sp.price}}/{{sp.soluong}}/{{sp.hang}}/{{sp.namsx}}/{{sp.cat}}" class="product-name">{{sp.name}}</a>
+                        <div class="product-price">{{sp.price | number}}<sup><u>đ</u></sup></div>
+                        <div>
+                            <ul class="thongtinchitiet">
+                                <li>Đường hính mặt: {{sp.duongkinhmat}}</li>
+                                <li>Chất liệu mặt kính: {{sp.chatlieu}}</li>
+                                <li>Chất liệu dây: {{sp.chatlieuday}}</li>
+                                <li>Bộ máy: {{sp.bomay}}</li>
+                                <li>Hãng: {{sp.hang}}</li>
+                            </ul>
+                        </div>
+                        <div style="color: rgb(241, 238, 56);">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="button-page">
+            <button type="button" class="btn btn-outline-primary" ng-click=first()> trang đầu</button>
+            <button type="button" class="btn btn-outline-primary" ng-click=previous()>trang trước</button>
+            <button type="button" class="btn btn-outline-primary" ng-click=next()>trang kế</button> 
+            <button type="button" class="btn btn-outline-primary" ng-click=last()>trang cuối</button> 
+        </div>
+    </div>

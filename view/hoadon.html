@@ -1,0 +1,57 @@
+<div style="text-align: center; color: red; margin-bottom: 20px;">
+    <h3>THÔNG TIN ĐƠN HÀNG</h3>
+    <hr>
+</div>
+<div class="body-row">
+    <div class="row">
+        <div class="col-6">
+            <h3>Thông tin sản phẩm</h3>
+        </div>
+        <div class="col-4" style="text-align: right;">
+            <h4>Thành tiền</h4>
+        </div>
+    </div>
+    <div class="row thanhtoan">
+        <div class="col-3">
+            <img src="./image/{{img}}" width="250px" height="250px" alt="">
+
+        </div>
+        <div class="col-6 thanhtoan-title">
+            <ul>
+                <li>{{name}}</li>
+                <li style="color: blue;">số lượng mua: {{soluongmua}}</li>
+                <li style="color: blue;">màu: {{mau}}</li>
+            </ul>
+            <hr>
+            <div style="margin-top: 20px; font-weight: 600;">Tạm tính ({{soluongmua}} sản phẩm): </div>
+        </div>
+
+        <div class="col-2">
+            <div style="margin-top: 105px; color: red; font-weight: 600;">{{tongtien |
+                number}}<sup><u>đ</u></sup></div>
+        </div>
+    </div>
+    <hr>
+    <div class="user-profile-hoadon body-user">
+        <h3>Thông tin khách hàng</h3>
+        <ul>
+            <li>Đơn hàng của {{genderchose}} {{username | uppercase}}</li>
+            <li>SĐT: {{phonenumber}}</li>
+            <li>Địa chỉ: {{diachi}}</li>
+            <li>Cách thức nhận hàng: {{giaohang}}</li>
+            <li>Yêu cầu khác: {{yeucau}}</li>
+            <li>Mã giảm giá: {{magiamgia}}</li>
+        </ul>
+        <hr>
+        <div style="margin-left: 10px; font-weight: 600; font-size: 17px;"> Tiền cần thanh toán: {{tongtien | number}}
+            <sup><u>đ</u></sup>
+        </div>
+        <div style="text-align: center;">
+
+            <a href="#!dathangthanhcong"><input type="button" onclick="gettime()" class="btn btn-outline-primary"
+                    value="Xác nhận đặt hàng"></a>
+
+        </div>
+    </div>
+
+</div>

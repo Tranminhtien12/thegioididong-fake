@@ -1,0 +1,28 @@
+
+<div class="register-form">
+    <h2 style="text-align: center;">Đăng nhập</h2>
+    <form action="#!/trangchu" name="loginform">
+        <div class="form-group">
+            <label for="usernameid">Tài khoản</label>
+            <input type="text" class="form-control" ng-model="username" placeholder="username" name="username" id="usernameid" required>
+            <div style="color: red;" ng-hide= "loginform.username.$valid">vui lòng nhập tài khoản* </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" class="form-control" ng-model="password" placeholder="password" name="password" id="password" required>
+            <div style="color: red;" ng-hide= "loginform.password.$valid">vui lòng nhập password*</div>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="remember" id="remember">
+            <label for="remember" class="form-check-label">Remember me</label>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <a  href="#!/register">Chưa có tài khoản</a><br>
+            <a  href="#!/register">Quên mật khẩu</a>
+        </div>
+        <button type="button" class="btn btn-primary btn-block">đăng nhập</button>
+    </form>
+
+    
+</div>
+
